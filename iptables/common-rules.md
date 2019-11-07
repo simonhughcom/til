@@ -13,13 +13,14 @@ iptables -A INPUT -p icmp --icmp-type echo-reply -j ACCEPT
 iptables -A OUTPUT -p icmp --icmp-type echo-request -j ACCEPT
 ```
 
-The following rules are all statefull, they will only allow incoming traffic if it is `ESABLISHED,RELATED`
-
 Allow all loopback connections.
 ``` shell
 iptables -A INPUT -i lo -j ACCEPT
 iptables -A OUTPUT -o lo -j ACCEPT
 ```
+
+## Stateful Rules
+The following rules are all stateful, they will only allow incoming traffic if it is `ESABLISHED,RELATED`
 
 Allow HTTP connections.
 ``` shell
