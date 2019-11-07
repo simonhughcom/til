@@ -1,5 +1,5 @@
 # Log And Drop
-Create a Log And Drop chain, to first log all packets not accepted and then drop them.
+Create a `LOGANDDROP` chain, to first log all packets not accepted and then drop them.
 
 ``` shell
 iptables -N LOGANDDROP
